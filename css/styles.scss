@@ -17,3 +17,12 @@
     margin-bottom: 15px;
   }
 }
+
+.card__box {
+  display: flex;
+  align-items: center;
+}
+
+.card__img {
+  border-radius: 50%;
+}

@@ -14,4 +14,13 @@
 }
 .card__item:not(:last-child) {
   margin-bottom: 15px;
+}
+
+.card__box {
+  display: flex;
+  align-items: center;
+}
+
+.card__img {
+  border-radius: 50%;
 }/*# sourceMappingURL=styles.css.map */
