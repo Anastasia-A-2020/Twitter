@@ -1,26 +1,66 @@
 .card-list {
   padding: 40px;
   list-style: none;
+  color: #fff;
+  font-family: "Roboto", "sans-serif";
+  font-size: 15px;
+  line-height: 1.33;
+  letter-spacing: 1.15px;
   background-color: #d3d3d3;
 }
 
 .card__item {
+  position: relative;
   margin-right: auto;
   margin-left: auto;
-  padding: 15px;
+  padding: 10px;
   width: 800px;
-  border: 2px solid #000;
-  background-color: cadetblue;
+  border: 2px solid #0f1419;
+  display: grid;
+  grid-template-columns: 1fr 7fr;
+  background-color: #0f1419;
+  background-image: linear-gradient(to bottom, #0f1419, #3d3d3d);
 }
 .card__item:not(:last-child) {
-  margin-bottom: 15px;
-}
-
-.card__box {
-  display: flex;
-  align-items: center;
+  margin-bottom: 5px;
 }
 
 .card__img {
   border-radius: 50%;
+}
+
+.card__user-info {
+  align-items: center;
+}
+
+.card__name {
+  display: inline;
+  font-size: 20px;
+}
+
+.card__icon {
+  vertical-align: middle;
+  max-width: 25px;
+  max-height: 25px;
+  fill: #d3d3d3;
+}
+
+.card__link {
+  color: #a9a9a9;
+  text-decoration: none;
+}
+
+.card__title {
+  font-weight: 400;
+  color: #a9a9a9;
+}
+
+.card__delete {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  border-radius: 3px;
+  max-width: 60px;
+  min-height: 25px;
+  cursor: pointer;
 }/*# sourceMappingURL=styles.css.map */
