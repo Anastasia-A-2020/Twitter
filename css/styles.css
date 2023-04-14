@@ -1,0 +1,17 @@
+.card-list {
+  padding: 40px;
+  list-style: none;
+  background-color: #d3d3d3;
+}
+
+.card__item {
+  margin-right: auto;
+  margin-left: auto;
+  padding: 15px;
+  width: 800px;
+  border: 2px solid #000;
+  background-color: cadetblue;
+}
+.card__item:not(:last-child) {
+  margin-bottom: 15px;
+}/*# sourceMappingURL=styles.css.map */
