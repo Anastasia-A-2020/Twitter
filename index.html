@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>HW5-Twitter</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
       rel="stylesheet"
@@ -12,7 +12,44 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
+    <header class="header">
+      <div class="container">
+        <button class="button" data-action="open-modal-btn">Add post</button>
+      </div>
+    </header>
+    <div class="mask">
+      <div class="loader"></div>
+    </div>
+
     <ul class="card-list"></ul>
+
+    <div class="backdrop is-hidden">
+      <form class="modal">
+        <label class="modal__label"
+          >Title
+          <input type="text" name="modalTitle" class="modal__title" required />
+        </label>
+
+        <textarea
+          name="modalText"
+          class="modal__text"
+          rows="5"
+          cols="70"
+          placeholder="Post"
+          autofocus
+          required
+        ></textarea>
+
+        <button
+          type="submit"
+          class="modal__submit-button"
+          data-action="add-post"
+        >
+          Add post
+        </button>
+      </form>
+    </div>
     <script src="./js/app.js"></script>
+    <script src="./js/option_tasks.js"></script>
   </body>
 </html>

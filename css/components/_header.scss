@@ -1,0 +1,21 @@
+.header {
+  background-color: #1e90ff;
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding: 10px;
+  width: 800px;
+
+  .header & {
+    display: flex;
+    justify-content: end;
+  }
+}
+
+.button {
+  border-radius: 3px;
+  padding: 5px 10px;
+  cursor: pointer;
+}

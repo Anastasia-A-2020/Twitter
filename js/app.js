@@ -2,6 +2,7 @@ const API_URL = "https://ajax.test-danit.com/api/json/";
 const cardsList = document.querySelector(".card-list");
 
 cardsList.addEventListener("click", onDeleteBtnClick);
+
 getUsersAndPosts()
   .then(data => {
     const usersMarkup = [];
@@ -20,7 +21,10 @@ getUsersAndPosts()
     }
     return usersMarkup.join("");
   })
-  .then(res => cardsList.insertAdjacentHTML("afterbegin", res));
+  .then(async res => {
+    await cardsList.insertAdjacentHTML("afterbegin", res);
+    mask.remove();
+  });
 
 class Card {
   constructor({ name, mail, title, post }) {
@@ -41,7 +45,7 @@ class Card {
       <svg class='card__icon'>
       <use href='../images/symbol-defs.svg#verified'/>
       </svg>
-      <a href='mail:${this.mail}' target='_blank' class='card__link'>${this.mail}</a>
+      <a href='mailto:${this.mail}' class='card__link'>${this.mail}</a>
       </p>
       <h3 class='card__title'>${this.title}</h3>
       <p id=${id}>${this.post}</p>
@@ -72,7 +76,7 @@ async function getUsersAndPosts() {
     );
     return { users, posts };
   } catch (error) {
-    console.log(error);
+    console.error(error);
   }
 }
 
@@ -86,6 +90,6 @@ async function deleteUsersPost(postId) {
       console.log(`The post with id ${postId} was deleted`);
     }
   } catch (error) {
-    console.log(error);
+    console.error(error);
   }
 }
